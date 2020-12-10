@@ -21,7 +21,7 @@ import ButtonFunctional from './components/ButtonFunctional'
 inside Apps return
 8. See what happens on your localhost, hopefully you will see your component rendered. HOORAY!
 9. Add a new file called ButtonClass.js
-10. Take inspiration from bare minimum functional component:
+10. Take inspiration from bare minimum functional component
 ```js
 import React from 'react'
 class MyComponent extends React.Component {
