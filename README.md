@@ -14,11 +14,7 @@ export default MyComponent
 ```js
 import ButtonFunctional from './components/ButtonFunctional'
 ```
-7. Add
-```js
-<ButtonFunctional/>
-``` 
-inside Apps return
+7. Add <ButtonFunctional/> inside Apps return
 8. See what happens on your localhost, hopefully you will see your component rendered. HOORAY!
 9. Add a new file called ButtonClass.js
 10. Take inspiration from bare minimum functional component
@@ -26,7 +22,7 @@ inside Apps return
 import React from 'react'
 class MyComponent extends React.Component {
     render() {
-        return (<div> Functional </div>)
+        return (<div> Class </div>)
     }
 }
 export default MyComponent
