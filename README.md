@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# React exercise 1
+1. Remove all bloat
+2. Add a new folder in src called "components"
+3. Add a new file called ButtonFunctional.js
+4. Take inspiration from bare minimum functional component: 
+```js
+import React from 'react'
+const MyComponent = () => {
+    return (<div> Functional </div>)
+}
+export default MyComponent
+```
+6. Import component into App.js 
+```js
+import ButtonFunctional from './components/ButtonFunctional'
+```
+7. Add
+```js
+<ButtonFunctional/>
+``` 
+inside Apps return
+8. See what happens on your localhost, hopefully you will see your component rendered. HOORAY!
+9. Add a new file called ButtonClass.js
+10. Take inspiration from bare minimum functional component:
+```js
+import React from 'react'
+class MyComponent extends React.Component {
+    render() {
+        return (<div> Functional </div>)
+    }
+}
+export default MyComponent
+```
+11. Import component in App.js
+12. Add to return function (remember, only one element should be returned from render/return function)
+13. Voila, you should now see your two different components!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React exercise 2
+## Project structure
+1. Inside components **EITHER** add a folder called styles where you keep all your component css **OR** make every component a folder containing ComponentFile.js **AND** the style file
+2. With the help of all the cheat sheets and each other, start making a todo-list! Remember to make small re-usable components
 
-## Available Scripts
+# Useful links
+### Event cheat sheet
+https://frontarm.com/james-k-nelson/react-events-cheatsheet/
 
-In the project directory, you can run:
+### React cheat sheet
+https://devhints.io/react
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### JSX cheat sheet
+https://www.codecademy.com/learn/react-101/modules/react-101-jsx-u/cheatsheet
