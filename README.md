@@ -1,5 +1,5 @@
 # React exercise 1
-1. Remove all bloat
+1. Remove all bloat html in App.js
 2. Add a new folder in src called "components"
 3. Add a new file called ButtonFunctional.js
 4. Take inspiration from bare minimum functional component: 
