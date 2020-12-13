@@ -1,47 +1,72 @@
 # React exercise 1
-1. Remove all bloat html in App.js
-2. Add a new folder in src called "components"
-3. Add a new file called ButtonFunctional.js
-4. Take inspiration from bare minimum functional component: 
+1. install redux with `npm install redux react-redux --save` 
+2. Add a new folder called actions inside src/
+3. Add a file called index.js in actions folder
+4. Add: 
 ```js
-import React from 'react'
-const MyComponent = () => {
-    return (<div> Functional </div>)
+export const increment = () => ({
+  type: 'INCREMENT_COUNTER'
+})
+
+export const decrement = () => ({
+  type: 'DECREMENT_COUNTER'
+})
+
+```
+1. Add a new folder called reducers inside src/
+2. Add a file called index.js in reducers folder
+3. Add :
+```js
+import { combineReducers } from 'redux'
+import counter from './counter'
+
+export default combineReducers({
+  counter
+})
+
+```
+7. Add a file called counter.js inside reducers folder
+8. Add:
+```js
+
+const counter = (state = [], action) => {
+    switch (action.type) {
+        case 'INCREMENT_COUNTER':
+            return {count: state.count + 1}
+    case 'DECREMENT_COUNTER':
+        return {count: state.count - 1}
+    default:
+        return state
+  }
 }
-export default MyComponent
-```
-6. Import component into App.js 
+
+export default todos
+
+``` 
+9. Add Provider to App.js: 
 ```js
-import ButtonFunctional from './components/ButtonFunctional'
+import { createStore } from 'redux';
+const store = createStore();
+
+  <Provider store={store}>
+    <Counter/>
+  </Provider>
 ```
-7. Add <ButtonFunctional/> inside Apps return
-8. See what happens on your localhost, hopefully you will see your component rendered. HOORAY!
-9. Add a new file called ButtonClass.js
-10. Take inspiration from bare minimum functional component
+10. In your Counter.js now import `import { connect } from 'react-redux';` at the top of the file
+11. To access the counter value we have to make use of the mapStateToProps function: 
 ```js
-import React from 'react'
-class MyComponent extends React.Component {
-    render() {
-        return (<div> Class </div>)
-    }
+// Add this function:
+function mapStateToProps(state) {
+  return {
+    count: state.count
+  };
 }
-export default MyComponent
+
+// Then replace this:
+// export default Counter;
+
+// With this:
+export default connect(mapStateToProps)(Counter);
+
 ```
-11. Import component in App.js
-12. Add to return function (remember, only one element should be returned from render/return function)
-13. Voila, you should now see your two different components!
-
-# React exercise 2
-## Project structure
-1. Inside components **EITHER** add a folder called styles where you keep all your component css **OR** make every component a folder containing ComponentFile.js **AND** the style file
-2. With the help of all the cheat sheets and each other, start making a todo-list! Remember to make small re-usable components
-
-# Useful links
-### Event cheat sheet
-https://frontarm.com/james-k-nelson/react-events-cheatsheet/
-
-### React cheat sheet
-https://devhints.io/react
-
-### JSX cheat sheet
-https://www.codecademy.com/learn/react-101/modules/react-101-jsx-u/cheatsheet
+12. ADD ACTION FUNCTIONALITY 
