@@ -79,3 +79,8 @@ export default connect(mapStateToProps)(Counter);
     this.props.dispatch({ type: 'DECREMENT_COUNTER' });
   }
 ``` 
+13. Now you should have a working Redux setup!
+
+## Bonus
+- Make a new component that uses your counter state
+- Make a new action that takes a value for increment (input field needed + argument to a new action!)
