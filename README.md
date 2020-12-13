@@ -17,19 +17,16 @@ export const decrement = () => ({
 2. Add a file called index.js in reducers folder
 3. Add :
 ```js
-import { combineReducers } from 'redux'
 import counter from './counter'
 
-export default combineReducers({
-  counter
-})
+export default counter
 
 ```
 7. Add a file called counter.js inside reducers folder
 8. Add:
 ```js
 
-const counter = (state = [], action) => {
+const counter = (state = {count: 0}, action) => {
     switch (action.type) {
         case 'INCREMENT_COUNTER':
             return {count: state.count + 1}
@@ -40,7 +37,7 @@ const counter = (state = [], action) => {
   }
 }
 
-export default todos
+export default counter
 
 ``` 
 9. Add Provider to App.js: 
@@ -83,4 +80,4 @@ export default connect(mapStateToProps)(Counter);
 
 ## Bonus
 - Make a new component that uses your counter state
-- Make a new action that takes a value for increment (input field needed + argument to a new action!)
+- Make a new action that takes a value for increment (input field needed + argument to a new action!) **HINT: combineReducers**
