@@ -1,30 +1,36 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
 class Counter extends React.Component {
-    state = {
-        counterValue: 0
-    }
     increment = () => {
-        const {counterValue} = this.state
-        const incrementedValue = counterValue + 1
-        this.setState({counterValue: incrementedValue})
+        this
+            .props
+            .dispatch({type: 'INCREMENT_COUNTER'});
     }
+
     decrement = () => {
-        const {counterValue} = this.state
-        const decrementedValue = counterValue - 1
-        this.setState({counterValue: decrementedValue})
+        this
+            .props
+            .dispatch({type: 'DECREMENT_COUNTER'});
     }
     render() {
-        const {counterValue} = this.state
+        const {counter} = this.props
         return (
             <div>
                 <button onClick={this.decrement}>Decrement</button>
                 <h1>
-                    {counterValue}
+                    {counter.count}
                 </h1>
                 <button onClick={this.increment}>Increment</button>
             </div>
         )
     }
 }
-export default Counter
+
+// Add this function to the bottom of the file:
+function mapStateToProps(state) {
+    return {counter: state.counter};
+}
+
+// Then replace this: export default Counter; With this:
+export default connect(mapStateToProps)(Counter);

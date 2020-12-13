@@ -40,22 +40,26 @@ const counter = (state = [], action) => {
   }
 }
 
-export default todos
+export default counter
 
 ``` 
-9. Add Provider to App.js: 
+10. Add Provider to App.js and import and create store at top of file: 
 ```js
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 const store = createStore();
-
+```
+Then wrap the Counter component with the provider
+```js
   <Provider store={store}>
     <Counter/>
   </Provider>
 ```
+
 10. In your Counter.js now import `import { connect } from 'react-redux';` at the top of the file
-11. To access the counter value we have to make use of the mapStateToProps function: 
+11. To access the counter value we have to make use of the mapStateToProps function, the value will then be available through the component props. e.g (this.props.count)
 ```js
-// Add this function:
+// Add this function to the bottom of the file:
 function mapStateToProps(state) {
   return {
     count: state.count
