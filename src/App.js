@@ -10,6 +10,7 @@ function App() {
     return (
         <div className="App">
             <Provider store={store}>
+              {console.log(store.getState())}
                 <Counter/>
                 <Todos/>
             </Provider>

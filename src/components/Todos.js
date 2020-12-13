@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addTodo} from '../actions'
 
-const Todos = ({dispatch}) => {
+const Todos = ({dispatch, todos}) => {
     let input
 
     const addTodoItem = (e) => {
@@ -13,6 +13,11 @@ const Todos = ({dispatch}) => {
 
     return (
         <div>
+            {todos.map(todo => <div>
+                {`Todo item: ${todo.text} is ${todo.completed
+                    ? 'done'
+                    : 'not done'}`}
+            </div>)}
             <form onSubmit={(e) => addTodoItem(e)}>
                 <input ref={node => input = node}/>
                 <button type="submit">
@@ -26,6 +31,5 @@ const Todos = ({dispatch}) => {
 function mapStateToProps(state) {
     return {todos: state.todos};
 }
-
 
 export default connect(mapStateToProps)(Todos)
