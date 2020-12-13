@@ -69,4 +69,13 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps)(Counter);
 
 ```
-12. ADD ACTION FUNCTIONALITY 
+12. Increment and decrement can now be re-written as follows: 
+```js
+ increment = () => {
+    this.props.dispatch({ type: 'INCREMENT_COUNTER' });
+  }
+
+  decrement = () => {
+    this.props.dispatch({ type: 'DECREMENT_COUNTER' });
+  }
+``` 
