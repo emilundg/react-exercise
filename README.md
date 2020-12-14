@@ -55,7 +55,7 @@ const store = createStore();
 // Add this function:
 function mapStateToProps(state) {
   return {
-    count: state.count
+    counter: state.counter
   };
 }
 
