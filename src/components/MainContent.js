@@ -5,10 +5,19 @@ import Message from './Message'
 class MainContent extends React.Component {
     render() {
         return (
-            <div>
+            <>
                 <Loader/>
-                <Message/>
-            </div>
+                <Message
+                    title={"Snyggt jobbat!"}
+                    message={"Nu har du lyckats skapa en conditionally rendered component"}
+                    buttons={[
+                    {
+                        action: 'Tack'
+                    }, {
+                        action: 'Usch!'
+                    }
+                ]}/>
+            </>
         )
     }
 }
