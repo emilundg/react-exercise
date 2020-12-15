@@ -53,7 +53,7 @@ const store = createStore(counterReducer);
     <Counter/>
   </Provider>
 ```
-11. In your Counter.js now import `import { connect } from 'react-redux';` at the top of the file
+11. In your `components/Counter.js` now import `import { connect } from 'react-redux';` at the top of the file
 12. To access the counter value we have to make use of the mapStateToProps function: 
 ```js
 // Add this function:
