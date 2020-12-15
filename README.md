@@ -17,3 +17,6 @@ componentDidMount() {
 5. Install `npm install --save prop-types`
 6. In `Message.js` import at top `import PropTypes from 'prop-types';`
 7. Add relevant proptypes for the properties sent to the component, make use of the official docs! https://www.npmjs.com/package/prop-types
+Hint: MyComponent.propTypes = {
+  myProp: PropTypes.bool
+};
