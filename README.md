@@ -59,7 +59,7 @@ const store = createStore(counterReducer);
 // Add this function:
 function mapStateToProps(state) {
   return {
-    counter: state.counter
+    count: state.count
   };
 }
 
@@ -80,7 +80,9 @@ export default connect(mapStateToProps)(Counter);
     this.props.dispatch({ type: 'DECREMENT_COUNTER' });
   }
 ``` 
-13. Now you should have a working Redux setup!
+13. Remove the previous state as it is now unused
+14. Change `counterValue` in the render function from state to be `count` from props
+15. Now you should have a working Redux setup!
 
 ## Bonus
 - Make a new component that uses your counter state
