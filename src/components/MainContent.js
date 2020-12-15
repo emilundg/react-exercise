@@ -5,7 +5,7 @@ import Message from './Message'
 class MainContent extends React.Component {
     render() {
         return (
-            <>
+            <div>
                 <Loader/>
                 <Message
                     title={"Snyggt jobbat!"}
@@ -17,7 +17,7 @@ class MainContent extends React.Component {
                         action: 'Usch!'
                     }
                 ]}/>
-            </>
+            </div>
         )
     }
 }
