@@ -43,6 +43,7 @@ export default counter
 9. Add Provider to App.js: 
 ```js
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import counterReducer from './reducers'
 const store = createStore(counterReducer);
 ```
