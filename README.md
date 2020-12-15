@@ -43,14 +43,17 @@ export default counter
 9. Add Provider to App.js: 
 ```js
 import { createStore } from 'redux';
-const store = createStore();
-
+import counterReducer from './reducers'
+const store = createStore(counterReducer);
+```
+10. Wrap your countercomponent with the provider
+```js
   <Provider store={store}>
     <Counter/>
   </Provider>
 ```
-10. In your Counter.js now import `import { connect } from 'react-redux';` at the top of the file
-11. To access the counter value we have to make use of the mapStateToProps function: 
+11. In your Counter.js now import `import { connect } from 'react-redux';` at the top of the file
+12. To access the counter value we have to make use of the mapStateToProps function: 
 ```js
 // Add this function:
 function mapStateToProps(state) {
