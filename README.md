@@ -86,4 +86,5 @@ export default connect(mapStateToProps)(Counter);
 
 ## Bonus
 - Make a new component that uses your counter state
-- Make a new action that takes a value for increment (input field needed + argument to a new action!) **HINT: combineReducers**
+- Make a new action that takes a value for increment (input field needed + argument to a new action!)
+- Add a new reducer and make use of the `combineReducers` function. What happens to the reducer state?
