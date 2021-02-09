@@ -1,47 +1,20 @@
 # React exercise 1
-1. Remove all bloat
-2. Add a new folder in src called "components"
-3. Add a new file called ButtonFunctional.js
-4. Take inspiration from bare minimum functional component: 
-```js
-import React from 'react'
-const MyComponent = () => {
-    return (<div> Functional </div>)
-}
-export default MyComponent
-```
-6. Import component into App.js 
-```js
-import ButtonFunctional from './components/ButtonFunctional'
-```
-7. Add <ButtonFunctional/> inside Apps return
-8. See what happens on your localhost, hopefully you will see your component rendered. HOORAY!
-9. Add a new file called ButtonClass.js
-10. Take inspiration from bare minimum functional component
-```js
-import React from 'react'
-class MyComponent extends React.Component {
-    render() {
-        return (<div> Class </div>)
-    }
-}
-export default MyComponent
-```
-11. Import component in App.js
-12. Add to return function (remember, only one element should be returned from render/return function)
-13. Voila, you should now see your two different components!
+## Declare variable
+1. Declare a variable city (const or let) with the value GÖTEBORG inside the main function.
+2. Write a console log of the variable. What does the console say? 
 
-# React exercise 2
-## Project structure
-1. Inside components **EITHER** add a folder called styles where you keep all your component css **OR** make every component a folder containing ComponentFile.js **AND** the style file
-2. With the help of all the cheat sheets and each other, start making a todo-list! Remember to make small re-usable components
+## Assignment
+1. The variable city from assignment 1 should now be re-assigned to have the value 'Stockholm'. 
+2. Write over the value and console log. What does the console say?
+   
+## Functions
+A function is a block of statements that can be executed as often as you like. A function can have parameters and can return a value. Functions can be defined in different ways. Perhaps the most common one is the function declaration. It starts with the keyword function. It follows:
 
-# Useful links
-### Event cheat sheet
-https://frontarm.com/james-k-nelson/react-events-cheatsheet/
+    the name of the function,
+    the parameters enclosed in round parentheses,
+    the statements enclosed in curly brackets.
 
-### React cheat sheet
-https://devhints.io/react
+With the keyword return a value can be returned. At the same time return terminates the function. Statements after a return will not be executed.
 
-### JSX cheat sheet
-https://www.codecademy.com/learn/react-101/modules/react-101-jsx-u/cheatsheet
+1. Define a function hello that returns 'Hello world!'.
+2. Assign a variable in main.js "let result = hello()" and print result.
