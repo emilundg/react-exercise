@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 
 const ButtonFunctional = ({title}) => {
     const [clickValue, setClickvalue] = useState(0)
-
     const clickHandler = () => setClickvalue(clickValue + 1)
 
     return (
