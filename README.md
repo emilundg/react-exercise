@@ -99,7 +99,8 @@ Save and try out the application. Now you should have a working todoList!! Good 
 ## Room for improvement
 This part is going to be very not guided but I will give a few tips and/or guidelines
 1. Probably the todoList, button etc looks pretty ugly. Add css files and classNames and start making your webpage b-e-a-uuutiful!
-2. What did we say, components components components. But now we have two!
+2. Add a header which displays how many items are in the todo list!
+3. What did we say, components components components. But now we only have two!
    1. The div inside TodoList.js map function can be made to a separate component aka TodoItem.js (add this file, what should the property be?)
    2. A little more tricky one: The text input with it's label will probably be used in several places if we expand this nice app. Make that into a component as well aka "TextInput.js". The props to this component will probably be something like title and a callback function. Why? Because the state we want to change from our input is in the parent component (where we add the todos.). In order to do this we pass a function as a property like this:
    ```js
@@ -109,3 +110,9 @@ This part is going to be very not guided but I will give a few tips and/or guide
    ```js 
     <input onChange={(event) => this.props.emitUserInput(event)}>
     ```
+
+4. Instead of pushing a String value to the todoList array, make objects which contain id, status and value. Also update your TodoList.js with the correct changes.
+5. If you have done step 3 you can now update your code to contain three different TodoList components. Which have different statuses, but how? 
+6. Make functionality to either mark an item as done/change status either by utilizing onPress or some other creative way!
+7. Add functionality to delete a specific todo!
+8. Be creative and make something that I have not thought of! :D
