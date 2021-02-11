@@ -105,7 +105,7 @@ This part is going to be very not guided but I will give a few tips and/or guide
    ```js
    <TextInput emitUserInput={(event) => parentFunction(event)}/>
    ```
-   Then inside our TextInput.js file (aka childComponent in this case) we can use this property as a function. So on our 
+   Then inside our TextInput.js file (aka childComponent in this case) we can use this property as a function. So on our input
    ```js 
     <input onChange={(event) => this.props.emitUserInput(event)}>
     ```
