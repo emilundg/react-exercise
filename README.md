@@ -78,6 +78,7 @@ handleUserInput(event) {
 <input onChange={(event) => handleUserInput(event)}> ...
 ```
 Now if you save and type something inside the input on the webapp you (in the console). Should see the values entered repeated back to you. NICE!
+
 10. What we want to do now is 2 things, 1) Set our userInput state if the input changes and 2) make use of!
 Start by implementing the handleUserInput function. This is done by, read, update. 
 
@@ -94,3 +95,17 @@ Step2: On the button tag, change the parameter addTodo("ITEM") to -->
 addTodo(this.state.userInput) 
 ```
 Save and try out the application. Now you should have a working todoList!! Good job!
+
+## Room for improvement
+This part is going to be very not guided but I will give a few tips and/or guidelines
+1. Probably the todoList, button etc looks pretty ugly. Add css files and classNames and start making your webpage b-e-a-uuutiful!
+2. What did we say, components components components. But now we have two!
+   1. The div inside TodoList.js map function can be made to a separate component aka TodoItem.js (add this file, what should the property be?)
+   2. A little more tricky one: The text input with it's label will probably be used in several places if we expand this nice app. Make that into a component as well aka "TextInput.js". The props to this component will probably be something like title and a callback function. Why? Because the state we want to change from our input is in the parent component (where we add the todos.). In order to do this we pass a function as a property like this:
+   ```js
+   <TextInput emitUserInput={(event) => parentFunction(event)}/>
+   ```
+   Then inside our TextInput.js file (aka childComponent in this case) we can use this property as a function. So on our 
+   ```js 
+    <input onChange={(event) => this.props.emitUserInput(event)}>
+    ```
