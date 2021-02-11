@@ -1,9 +1,12 @@
 import React from 'react'
+import TodoList from './TodoList'
 
 class MainContent extends React.Component {
     render() {
         return (
-            <div>MainContent</div>
+            <div className="MainContent">
+                <TodoList/>
+            </div>
         )
     }
 }
